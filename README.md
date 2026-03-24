@@ -49,10 +49,10 @@ Rainbow Health is built on three pillars:
 
 ```bash
 # Clone into OpenClaw shared skills directory
-git clone https://github.com/[你的用户名]/rainbow-health.git ~/.openclaw/skills/rainbow-health
+git clone https://github.com/baimao_jerry/rainbow-health.git ~/.openclaw/skills/rainbow-health
 
 # Or clone into a workspace
-git clone https://github.com/[你的用户名]/rainbow-health.git ./skills/rainbow-health
+git clone https://github.com/baimao_jerry/rainbow-health.git ./skills/rainbow-health
 ```
 
 ### Option B — Cherry-pick individual skills

@@ -49,10 +49,10 @@ Rainbow Health 建立在四大支柱之上：
 
 ```bash
 # 克隆到 OpenClaw 共享技能目录
-git clone https://github.com/[你的用户名]/rainbow-health.git ~/.openclaw/skills/rainbow-health
+git clone https://github.com/baimao_jerry/rainbow-health.git ~/.openclaw/skills/rainbow-health
 
 # 或克隆到工作区
-git clone https://github.com/[你的用户名]/rainbow-health.git ./skills/rainbow-health
+git clone https://github.com/baimao_jerry/rainbow-health.git ./skills/rainbow-health
 ```
 
 ### 方式 B —— 按需挑选
