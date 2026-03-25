@@ -1,34 +1,27 @@
-[English](README.md) | **中文**
-
-<div align="center">
-
 # 🌈 Rainbow Health
 
-### 228+ 个 AI 健康技能，适用于 OpenClaw
+### 228+ 个 AI 健康技能，适用于 Claude Code
 
-![Skills](https://img.shields.io/badge/skills-228+-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![OpenClaw](https://img.shields.io/badge/OpenClaw-compatible-orange)
+![Skills](https://img.shields.io/badge/skills-228+-blue) ![License](https://img.shields.io/badge/license-Proprietary-red)
 
-**基于 VitaClaw 增强的健康 AI 技能库**
+**完全原创的健康 AI 技能库**
 
 从血压追踪到智能设备集成——全面的健康智能，为你的 AI 助手赋能。
-
-</div>
 
 ---
 
 ## 什么是 Rainbow Health？
 
-Rainbow Health 是一个基于 [VitaClaw](https://github.com/vitaclaw/vitaclaw) 增强的开源健康 AI 技能库，专为 [OpenClaw](https://openclaw.ai) 设计。在保留 VitaClaw 222 个核心技能的基础上，我们新增了智能设备集成、社交化健康管理和视觉 AI 等创新功能。
+Rainbow Health 是一个完全原创的健康 AI 技能库，专为 Claude Code 设计。涵盖智能设备集成、社交化健康管理和视觉 AI 等创新功能。
 
 Rainbow Health 建立在四大支柱之上：
 
-1. **健康记忆系统** —— 在 `memory/health/` 下进行每日健康追踪，在 `~/.openclaw/patients/` 下维护结构化的临床病历档案。你的数据以纯 Markdown 文件形式存储在本地，由 git 版本控制，完全由你掌控。
+1. **健康记忆系统** —— 在 `memory/health/` 下进行每日健康追踪，在 `~/.claude/patients/` 下维护结构化的临床病历档案。你的数据以纯 Markdown 文件形式存储在本地，由 git 版本控制，完全由你掌控。
 2. **模块化技能** —— 228+ 个独立的 `SKILL.md` 文件，每个文件定义自己的提示词、工具和数据格式。按需引入，自由编辑，无限扩展。
-3. **智能设备集成** —— 新增体脂秤、智能手环、CGM 动态血糖监测等设备的无缝数据接入
+3. **智能设备集成** —— 体脂秤、智能手环、CGM 动态血糖监测等设备的无缝数据接入
 4. **社交健康内容** —— 生成适合小红书等社交平台分享的健康内容
 
 ### 为什么选择 Rainbow Health？
-
 
 | 特性       | 通用健康应用         | Rainbow Health                          |
 | ---------- | -------------------- | --------------------------------------- |
@@ -36,10 +29,27 @@ Rainbow Health 建立在四大支柱之上：
 | 可定制性   | 固定功能             | 可编辑任何 `SKILL.md`                   |
 | 临床深度   | 消费级               | 研究级（PubMed、ClinVar、GWAS）         |
 | 集成能力   | 各自孤立             | 技能通过 health-memory 互联互通         |
-| AI 模型    | 单一供应商           | 通过 OpenClaw 支持任意模型              |
+| AI 模型    | 单一供应商           | 通过 Claude Code 支持任意模型           |
 | **智能设备** | 有限支持           | **体脂秤、手环、CGM 全面支持**          |
 | **视觉 AI**  | 无照片分析         | **餐食照片营养评分**                    |
 | **社交内容** | 通用报告           | **小红书风格健康分享**                  |
+
+---
+
+## 核心架构
+
+### 五大健康维度（V-Score v3.8）
+- **代谢基础** (25%) - 体脂率、内脏脂肪、步数
+- **营养质量** (30%) - 营养结构、热量准确性、抗炎比例
+- **睡眠恢复** (15%) - 深度睡眠、睡眠效率、入睡时间
+- **运动活力** (15%) - 运动时长、运动强度
+- **压力管理** (15%) - 主观压力、HRV
+
+### 四大核心模块
+1. **减脂** - 热量管理、体脂追踪、代谢优化
+2. **增肌** - 蛋白质管理、训练规划、恢复监控
+3. **抗炎** - 饮食炎症指数、Omega平衡、生活方式
+4. **控糖** - CGM监测、血糖波动、胰岛素敏感
 
 ---
 
@@ -48,27 +58,43 @@ Rainbow Health 建立在四大支柱之上：
 ### 方式 A —— Git Clone（推荐）
 
 ```bash
-# 克隆到 OpenClaw 共享技能目录
-git clone https://github.com/baimao_jerry/rainbow-health.git ~/.openclaw/skills/rainbow-health
+# 克隆到 Claude Code 共享技能目录
+git clone https://github.com/lajerry111/rainbow-health.git ~/.claude/skills/rainbow-health
 
 # 或克隆到工作区
-git clone https://github.com/baimao_jerry/rainbow-health.git ./skills/rainbow-health
+git clone https://github.com/lajerry111/rainbow-health.git ./skills/rainbow-health
 ```
 
 ### 方式 B —— 按需挑选
 
 ```bash
 # 只复制你需要的技能
-cp -r rainbow-health/skills/rainbow-body-composition-scale ~/.openclaw/skills/
-cp -r rainbow-health/skills/rainbow-meal-photo-scorer ~/.openclaw/skills/
+cp -r rainbow-health/skills/body-composition-scale ~/.claude/skills/
+cp -r rainbow-health/skills/meal-scoring ~/.claude/skills/
 ```
 
-无需构建步骤，无需依赖，无需配置向导。OpenClaw 会自动发现技能目录中的 `SKILL.md` 文件。
+无需构建步骤，无需依赖，无需配置向导。Claude Code 会自动发现技能目录中的 `SKILL.md` 文件。
+
+---
+
+## 技能目录
+
+```
+skills/
+├── 00-core/                    # 核心基础设施
+├── 01-assessment/              # V-Score评估体系
+├── 02-fat-loss/                # 减脂模块
+├── 03-muscle-gain/             # 增肌模块
+├── 04-anti-inflammatory/       # 抗炎模块
+├── 05-glucose-control/         # 控糖模块
+├── 06-daily-coaching/          # 日常教练
+├── 07-tplate/                  # T型餐盘系统
+└── 08-reports/                 # 报告系统
+```
 
 ---
 
 ## 技能概览
-
 
 | #  | 分类                                                                     | 数量 | 亮点                                                                                          |
 | -- | ------------------------------------------------------------------------ | ---- | --------------------------------------------------------------------------------------------- |
@@ -102,29 +128,29 @@ cp -r rainbow-health/skills/rainbow-meal-photo-scorer ~/.openclaw/skills/
 
 ### 智能设备集成
 
-#### 体脂秤集成 (`rainbow-body-composition-scale`)
+#### 体脂秤集成 (`body-composition-scale`)
 - 自动同步彩虹生活体脂秤数据
 - 15项身体成分指标追踪
 - 趋势分析和健康建议
 
-#### 智能手环集成 (`rainbow-smart-bracelet`)
+#### 智能手环集成 (`smart-bracelet`)
 - 支持小米、Apple Watch、华为、Garmin 等品牌
 - 步数、心率、睡眠、运动数据同步
 - 多维度健康分析
 
-#### CGM 动态血糖监测 (`rainbow-cgm-monitor`)
+#### CGM 动态血糖监测 (`cgm-monitor`)
 - 支持 Dexcom、FreeStyle Libre、硅基动感等设备
 - 实时血糖追踪和趋势分析
 - AGP 动态血糖图谱生成
 
 ### AI 视觉与内容创作
 
-#### 餐食照片评分 (`rainbow-meal-photo-scorer`)
+#### 餐食照片评分 (`meal-scoring`)
 - 5维度营养评分（控糖、营养、抗炎、热量、多样性）
 - AI 视觉分析食物成分
 - 个性化健康建议
 
-#### 小红书内容创作 (`rainbow-xiaohongshu-creator`)
+#### 小红书内容创作 (`xiaohongshu-creator`)
 - 健康餐分享文案
 - 体重里程碑打卡
 - 产品种草内容
@@ -215,17 +241,9 @@ memory/health/
 
 ---
 
-## 致谢
-
-Rainbow Health 基于 [VitaClaw](https://github.com/vitaclaw/vitaclaw) 构建，保留了原项目 222 个核心技能，并在此基础上进行扩展和增强。
-
-感谢 VitaClaw 团队和所有开源贡献者的卓越工作！
-
----
-
 ## 许可证
 
-MIT License - 详见 [LICENSE](LICENSE) 文件
+Proprietary - 完全自有版权
 
 ---
 
