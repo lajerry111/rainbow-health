@@ -1,6 +1,6 @@
 # 🌈 Rainbow Health
 
-### 228+ 个 AI 健康技能，适用于 Claude Code
+### 228+ 个 AI 健康技能，适用于 OpenClaw
 
 ![Skills](https://img.shields.io/badge/skills-228+-blue) ![License](https://img.shields.io/badge/license-Proprietary-red)
 
@@ -12,11 +12,11 @@
 
 ## 什么是 Rainbow Health？
 
-Rainbow Health 是一个完全原创的健康 AI 技能库，专为 Claude Code 设计。涵盖智能设备集成、社交化健康管理和视觉 AI 等创新功能。
+Rainbow Health 是一个完全原创的健康 AI 技能库，专为 OpenClaw 设计。涵盖智能设备集成、社交化健康管理和视觉 AI 等创新功能。
 
 Rainbow Health 建立在四大支柱之上：
 
-1. **健康记忆系统** —— 在 `memory/health/` 下进行每日健康追踪，在 `~/.claude/patients/` 下维护结构化的临床病历档案。你的数据以纯 Markdown 文件形式存储在本地，由 git 版本控制，完全由你掌控。
+1. **健康记忆系统** —— 在 `memory/health/` 下进行每日健康追踪，在 `~/.openclaw/patients/` 下维护结构化的临床病历档案。你的数据以纯 Markdown 文件形式存储在本地，由 git 版本控制，完全由你掌控。
 2. **模块化技能** —— 228+ 个独立的 `SKILL.md` 文件，每个文件定义自己的提示词、工具和数据格式。按需引入，自由编辑，无限扩展。
 3. **智能设备集成** —— 体脂秤、智能手环、CGM 动态血糖监测等设备的无缝数据接入
 4. **社交健康内容** —— 生成适合小红书等社交平台分享的健康内容
@@ -29,7 +29,7 @@ Rainbow Health 建立在四大支柱之上：
 | 可定制性   | 固定功能             | 可编辑任何 `SKILL.md`                   |
 | 临床深度   | 消费级               | 研究级（PubMed、ClinVar、GWAS）         |
 | 集成能力   | 各自孤立             | 技能通过 health-memory 互联互通         |
-| AI 模型    | 单一供应商           | 通过 Claude Code 支持任意模型           |
+| AI 模型    | 单一供应商           | 通过 OpenClaw 支持任意模型              |
 | **智能设备** | 有限支持           | **体脂秤、手环、CGM 全面支持**          |
 | **视觉 AI**  | 无照片分析         | **餐食照片营养评分**                    |
 | **社交内容** | 通用报告           | **小红书风格健康分享**                  |
@@ -58,8 +58,8 @@ Rainbow Health 建立在四大支柱之上：
 ### 方式 A —— Git Clone（推荐）
 
 ```bash
-# 克隆到 Claude Code 共享技能目录
-git clone https://github.com/lajerry111/rainbow-health.git ~/.claude/skills/rainbow-health
+# 克隆到 OpenClaw 共享技能目录
+git clone https://github.com/lajerry111/rainbow-health.git ~/.openclaw/skills/rainbow-health
 
 # 或克隆到工作区
 git clone https://github.com/lajerry111/rainbow-health.git ./skills/rainbow-health
@@ -69,11 +69,11 @@ git clone https://github.com/lajerry111/rainbow-health.git ./skills/rainbow-heal
 
 ```bash
 # 只复制你需要的技能
-cp -r rainbow-health/skills/body-composition-scale ~/.claude/skills/
-cp -r rainbow-health/skills/meal-scoring ~/.claude/skills/
+cp -r rainbow-health/skills/body-composition-scale ~/.openclaw/skills/
+cp -r rainbow-health/skills/meal-scoring ~/.openclaw/skills/
 ```
 
-无需构建步骤，无需依赖，无需配置向导。Claude Code 会自动发现技能目录中的 `SKILL.md` 文件。
+无需构建步骤，无需依赖，无需配置向导。OpenClaw 会自动发现技能目录中的 `SKILL.md` 文件。
 
 ---
 

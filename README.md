@@ -1,6 +1,6 @@
 # RainbowHealth Coach
 
-基于 Claude Code 的减脂增肌抗炎控糖专家教练系统
+基于 OpenClaw 的减脂增肌抗炎控糖专家教练系统
 
 ## Core Architecture
 
